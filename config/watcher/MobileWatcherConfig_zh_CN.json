@@ -1,0 +1,13 @@
+[
+  {
+    "matchedActivity":"com.tencent.mm/.sandbox.updater.AppUpdaterUI",
+    "eleToClick":{
+      "type":"ui",
+      "value":"text=取消"
+    },
+    "whenElement":{
+
+    },
+    "comment":"the cancel update button"
+  }
+]

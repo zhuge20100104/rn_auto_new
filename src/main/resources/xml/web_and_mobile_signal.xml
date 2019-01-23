@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="HelloTest" verbose="1" >
+    <!--  Configure testng listener-->
+    <listeners>
+        <listener class-name="base.report.TestNGReport" />
+    </listeners>
+
+
+    <test name="Test - First Hello Test" parallel="classes" thread-count="2">
+        <classes>
+            <class name="osvc.tests.integrator.mobile.webmobiledemo.HelloTest5"></class>
+            <class name="osvc.tests.integrator.mobile.webmobiledemo.WechatFollowTest5"></class>
+        </classes>
+    </test>
+
+
+</suite>
+
+
+
+
+

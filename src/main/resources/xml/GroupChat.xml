@@ -1,0 +1,93 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="chat transfer and conference" verbose="1">
+    <!--  Configure testng listener-->
+    <listeners>
+        <listener class-name="base.report.TestNGReport" />
+    </listeners>
+
+    <!--<test name="survey group">-->
+        <!--<classes>-->
+            <!--<class name="osvc.tests.integrator.web.chatdemo.SurveyTest"/>-->
+        <!--</classes>-->
+    <!--</test>-->
+
+    <!--<test name="chat group">-->
+        <!--<classes>-->
+            <!--<class name="osvc.tests.integrator.web.chatdemo.ChatTest"/>-->
+        <!--</classes>-->
+    <!--</test>-->
+
+    <!--<test name="transfer chat session test" parallel="classes" thread-count="3">-->
+        <!--<classes>-->
+            <!--<class name="osvc.tests.integrator.web.GroupChat.Mobile1">-->
+                <!--<methods>-->
+                    <!--<include name="transferChatSession_mobile1"></include>-->
+                <!--</methods>-->
+            <!--</class>-->
+            <!--<class name="osvc.tests.integrator.web.GroupChat.Agent1">-->
+                <!--<methods>-->
+                    <!--<include name="transferChatSession_agent1"></include>-->
+                <!--</methods>-->
+            <!--</class>-->
+            <!--<class name="osvc.tests.integrator.web.GroupChat.Agent2">-->
+                <!--<methods>-->
+                    <!--<include name="transferChatSession_agent2"></include>-->
+                <!--</methods>-->
+            <!--</class>-->
+        <!--</classes>-->
+    <!--</test>-->
+
+    <test name="chat conference test" parallel="classes" thread-count="3">
+        <classes>
+            <class name="osvc.tests.integrator.web.GroupChat.Agent1">
+                <methods>
+                    <include name="chatConferenceTest_agent1"></include>
+                </methods>
+            </class>
+            <class name="osvc.tests.integrator.web.GroupChat.Agent2">
+                <methods>
+                    <include name="chatConferenceTest_agent2"></include>
+                </methods>
+            </class>
+            <class name="osvc.tests.integrator.web.GroupChat.Mobile1"></class>
+        </classes>
+    </test>
+
+    <!--<test name="mergecontact test" parallel="classes" thread-count="2">-->
+        <!--<classes>-->
+            <!--<class name="osvc.tests.integrator.web.mergecontact.MergeContactWeb">-->
+                <!--<methods>-->
+                    <!--<include name="MergeContact_Agent"></include>-->
+                <!--</methods>-->
+            <!--</class>-->
+            <!--<class name="osvc.tests.integrator.web.mergecontact.MergeContactMobile">-->
+                <!--<methods>-->
+                    <!--<include name="MergeContact_Mobile"></include>-->
+                <!--</methods>-->
+            <!--</class>-->
+        <!--</classes>-->
+    <!--</test>-->
+
+    <!--<test name="chat conference teeest" parallel="classes" thread-count="3">-->
+        <!--<groups>-->
+            <!--<run>-->
+                <!--<include name="chat"></include>-->
+            <!--</run>-->
+        <!--</groups>-->
+        <!--<classes>-->
+            <!--<class name="osvc.tests.integrator.web.GroupChat.Agent1">-->
+                <!--<methods>-->
+                    <!--<include name="chatConferenceTest_agent1"></include>-->
+                <!--</methods>-->
+            <!--</class>-->
+            <!--<class name="osvc.tests.integrator.web.GroupChat.Agent2">-->
+                <!--<methods>-->
+                    <!--<include name="chatConferenceTest_agent2"></include>-->
+                <!--</methods>-->
+            <!--</class>-->
+            <!--<class name="osvc.tests.integrator.web.GroupChat.Mobile1"></class>-->
+        <!--</classes>-->
+    <!--</test>-->
+
+</suite>

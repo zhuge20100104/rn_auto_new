@@ -1,0 +1,35 @@
+{
+  "name_order": {
+    "locator":"css=#oms-account-0 > div.WeChat > div.account div.name"
+  },
+  "update_time": {
+    "locator":"css=#oms-account-0 > div.WeChat > div.account-type div.time"
+  },
+  "add_btn": {
+    "locator":"css=.add-account"
+  },
+  "wechat_type_btn": {
+    "locator":"css=button.channel-button.wechat"
+  },
+  "next_btn": {
+    "locator":"css=oj-button.next-button"
+  },
+  "agree_input": {
+    "locator":"id=agreement"
+  },
+  "enable_next_button": {
+    "locator":"css=oj-button.next-button.oj-enabled"
+  },
+  "authorize_btn": {
+    "locator":"css=oj-button[on-oj-action='[[authorizeWeChatAccount]]'] button"
+  },
+  "wechat_accounts": {
+    "locator":"css=.wechat-accounts"
+  },
+  "wechat_accounts_items": {
+    "locator":"css=.account-item"
+  },
+  "qrcode": {
+    "locator":"css=img.qrcode"
+  }
+}

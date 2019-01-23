@@ -1,0 +1,36 @@
+{
+  "account_edit":{
+    "name":"account_edit",
+    "type":"tag",
+    "locator":"",
+    "ctype":"span",
+    "attrname":"0",
+    "location":"equals",
+    "value":"Edit"
+  },
+  "official_account_name": {
+    "name": "official_account_name",
+    "type": "web",
+    "locator": "id",
+    "value": "offical-account-name",
+    "comment": "official account name field"
+  },
+  "test_button":{
+    "name":"test_button",
+    "type":"tag",
+    "locator":"",
+    "ctype":"span",
+    "attrname":"0",
+    "location":"equals",
+    "value":"Test"
+  },
+  "save_button": {
+    "name":"save_button",
+    "type":"tag",
+    "locator":"",
+    "ctype":"span",
+    "attrname":"0",
+    "location":"equals",
+    "value":"Save"
+  }
+}

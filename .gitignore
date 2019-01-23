@@ -1,0 +1,17 @@
+.idea/
+out/
+.gradle/
+logs/
+build/
+gradle/
+oracle-javacloud-sdk/
+src/main/resources/report/reports/
+base-module/build/
+base-module/out/
+report/reports/
+test.db
+.classpath
+.project
+.settings/
+bin/
+test-output/

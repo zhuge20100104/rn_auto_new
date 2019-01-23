@@ -1,0 +1,91 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="MobileTest" verbose="1" >
+    <listeners>
+        <listener class-name="base.report.TestNGReport" />
+    </listeners>
+    <!--  Configure testng listener-->
+    <!-- <listeners>
+          <listener class-name="osvc.util.RetryListener" />
+    </listeners> -->
+
+
+    <test name="Test - Group Test" parallel="classes" thread-count="2">
+        <groups>
+            <run>
+                <include name="A1"/>
+            </run>
+        </groups>
+
+        <packages>
+            <package name="osvc.mobile.wechat.tests" />
+        </packages>
+
+        <!--<classes>-->
+            <!--<class name="osvc.mobile.wechat.tests.WeChatFollowTest"/>-->
+            <!--<class name="osvc.mobile.wechat.tests.WeChatFollowTest2"/>-->
+        <!--</classes>-->
+    </test>
+
+
+
+    <test name="Test - Not Group Test" parallel="classes" thread-count="2">
+        <groups>
+            <run>
+                <include name="A1"/>
+            </run>
+        </groups>
+
+        <packages>
+            <package name="osvc.mobile.wechat.tests" />
+        </packages>
+
+        <!--<classes>-->
+        <!--<class name="osvc.mobile.wechat.tests.WeChatFollowTest"/>-->
+        <!--<class name="osvc.mobile.wechat.tests.WeChatFollowTest2"/>-->
+        <!--</classes>-->
+    </test>
+
+
+    <!--<test name="Test - First Hello Test"   parallel="classes" thread-count="2">-->
+
+        <!--<classes>-->
+            <!--<class name="osvc.mobile.wechat.tests.WeChatFollowTest">-->
+                <!--<methods>-->
+                    <!--<include name="test"></include>-->
+                <!--</methods>-->
+            <!--</class>-->
+
+            <!--<class name="osvc.mobile.wechat.tests.WeChatFollowTest2">-->
+                <!--<methods>-->
+                    <!--<include name="test2"></include>-->
+                <!--</methods>-->
+            <!--</class>-->
+
+
+        <!--</classes>-->
+    <!--</test>-->
+
+    <!--<test name="Test - Second Hello Test"   parallel="classes" thread-count="2">-->
+        <!--<classes>-->
+            <!--<class name="osvc.mobile.wechat.tests.WeChatFollowTest3">-->
+                <!--<methods>-->
+                    <!--<include name="test3"></include>-->
+                <!--</methods>-->
+            <!--</class>-->
+
+            <!--<class name="osvc.mobile.wechat.tests.WeChatFollowTest4">-->
+                <!--<methods>-->
+                    <!--<include name="test4"></include>-->
+                <!--</methods>-->
+            <!--</class>-->
+        <!--</classes>-->
+    <!--</test>-->
+
+
+</suite>
+
+
+
+
+

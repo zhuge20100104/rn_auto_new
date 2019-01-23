@@ -1,0 +1,52 @@
+{
+  "regSearchPhoneBtn":{
+    "name":"regSearchPhoneBtn",
+    "type":"css",
+    "locator":"css",
+    "ctype":"input",
+    "attrname":"automationid",
+    "location":"equals",
+    "value":"Phone"
+  },
+  "regSearchFirstNameBtn": {
+    "name":"regSearchFirstNameBtn",
+    "type":"css",
+    "locator":"css",
+    "ctype":"input",
+    "attrname":"automationid",
+    "location":"equals",
+    "value":"Contact First Name"
+  },
+  "regSearchBtn":{
+    "name":"regSearchBtn",
+    "type":"tag",
+    "locator":"",
+    "ctype":"button",
+    "attrname":"0",
+    "location":"equals",
+    "value":"Search"
+  },
+  "regDeleteBtn": {
+    "name":"regDeleteBtn",
+    "type":"web",
+    "locator":"classname",
+    "child":{
+      "ctlType":"span",
+      "attrName":"text",
+      "location":"equals",
+      "value":"Delete"
+    },
+    "value":"oj-datagrid-databody",
+    "timeout":20
+  },
+  "deleteYesBtn":{
+    "name":"deleteYesBtn",
+    "type":"css",
+    "locator":"css",
+    "ctype":"button",
+    "attrname":"automationid",
+    "location":"equals",
+    "value":"Yes",
+    "timeout":20
+  }
+}

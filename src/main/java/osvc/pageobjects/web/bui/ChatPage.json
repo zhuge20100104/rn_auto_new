@@ -1,0 +1,125 @@
+{
+  "focusChatPane":{
+    "name":"focusChatPane",
+    "type":"web",
+    "locator":"css",
+    "value":"div.OracleChatPanel.focus",
+    "child":{
+      "attrName":"classname",
+      "value":"cke_wysiwyg_frame"
+    },
+    "comment":"The current focused chat pane, To get its frame child"
+  },
+  "conferenceButton":{
+    "name":"conferenceButton",
+    "type":"web",
+    "locator":"css",
+    "value":"div.OracleChatPanel.focus",
+    "timeout":8,
+    "child":{
+      "attrName":"classname",
+      "value":"OracleChatConferenceButton"
+    },
+    "comment":"The current focused chat pane, To get its Conference Button"
+  },
+  "bot2ConferenceButton":{
+    "locator":"css=span[title=Bot2]"
+  }
+  ,
+  "productSelect":{
+    "name":"productSelect",
+    "type":"css",
+    "locator":"css",
+    "ctype":"div",
+    "attrname":"id",
+    "location":"startwith",
+    "value":"searchInputContainer_Incident_ProdId",
+    "child":{
+      "attrName":"classname",
+      "value":"select-box-input"
+    }
+  }
+  ,
+  "productIdList":{
+    "name":"productIdList",
+    "type":"css",
+    "locator":"css",
+    "ctype":"ul",
+    "attrname":"id",
+    "location":"startwith",
+    "value":"select-box-results-Incident_ProdId"
+  }
+  ,
+  "saveBtn":{
+    "name":"saveBtn",
+    "type":"css",
+    "locator":"css",
+    "ctype":"button",
+    "attrname":"id",
+    "location":"endwith",
+    "value":"InteractionSave"
+  }
+  ,
+  "messageInputText":{
+    "name":"messageInputText",
+    "type":"web",
+    "locator":"tagname",
+    "value":"body",
+    "comment":"The current input message textfield"
+  },
+  "sendMessageBtn":{
+    "name":"sendMessageBtn",
+    "type":"web",
+    "locator":"css",
+    "value":"button.OracleChatInputSendButton",
+    "comment":"Message Send button in BUI"
+  }
+  ,
+  "terminateChatBtn": {
+    "name":"terminateChatBtn",
+    "type":"web",
+    "locator":"css",
+    "value":"button.OracleChatTerminateButton",
+    "comment":"The button to terminate current chat"
+  },
+  "lastMessageSpan": {
+    "name":"lastMessageSpan",
+    "type":"web",
+    "locator":"id",
+    "child":{
+      "ctlType":"span",
+      "attrName":"text",
+      "location":"equals",
+      "value":"str21"
+    },
+    "value":"chatPanelContentContainer",
+    "timeout":60
+  },
+  "focusChatPaneTerminate":{
+    "name":"focusChatPaneTerminate",
+    "type":"web",
+    "locator":"css",
+    "value":"div.OracleChatPanel.focus",
+    "child":{
+      "attrName":"classname",
+      "value":"OracleChatTerminateButton"
+    },
+    "comment":"The current focused chat pane, To get its frame child",
+    "timeout":45
+  },
+  "focusChatPaneText":{
+    "name":"focusChatPaneText",
+    "type":"web",
+    "locator":"css",
+    "value":"OracleChatPanel focus",
+    "comment":"Oracle focus chat panel text",
+    "timeout":15
+  },
+  "hiddenChatPane":{
+    "name":"hiddenChatPane",
+    "type":"web",
+    "locator":"classname",
+    "value":"OracleChatPanelHeaderContainer",
+    "comment":"The current hidden chat pane"
+  }
+}

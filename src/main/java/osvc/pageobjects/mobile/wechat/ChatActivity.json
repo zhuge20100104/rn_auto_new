@@ -1,0 +1,122 @@
+{
+  "inChatProgress":{
+    "name":"inChatProgress",
+    "type":"ui",
+    "locator":"",
+    "ctype":"",
+    "attrname":"text",
+    "location":"contains",
+    "value":"You are currently in the chat process",
+    "timeout": 60
+  },
+  "question":{
+    "name":"question",
+    "type":"ui",
+    "locator":"",
+    "ctype":"",
+    "attrname":"text",
+    "location":"contains",
+    "value":"question",
+    "timeout":120
+  },
+  "chatInQueue": {
+    "name":"chatInQueue",
+    "type":"ui",
+    "locator":"",
+    "ctype":"",
+    "attrname":"text",
+    "location":"contains",
+    "value":"queue",
+    "timeout":120
+  },
+  "incidentImportant":{
+    "name":"incidentImportant",
+    "type":"ui",
+    "locator":"",
+    "ctype":"",
+    "attrname":"text",
+    "location":"contains",
+    "value":"Your request is important to",
+    "timeout":50
+  },
+  "incidentDesc":{
+    "name":"incidentDesc",
+    "type":"ui",
+    "locator":"",
+    "ctype":"",
+    "attrname":"text",
+    "location":"contains",
+    "value":"Please describe your question",
+    "timeout":50
+  },
+  "maxNumEntries": {
+    "name":"maxNumEntries",
+    "type":"ui",
+    "locator":"",
+    "ctype":"",
+    "attrname":"text",
+    "location":"contains",
+    "value":"Maximum number of entries is reached",
+    "timeout":50
+  },
+  "agentLeftMessage":{
+    "name":"agentLeftMessage",
+    "type":"ui",
+    "locator":"",
+    "ctype":"",
+    "attrname":"text",
+    "location":"contains",
+    "value":"state change Left",
+    "timeout":130
+  },
+  "haveRegistered": {
+    "name":"haveRegistered",
+    "type":"ui",
+    "locator":"",
+    "ctype":"",
+    "attrname":"text",
+    "location":"contains",
+    "value":"You have already registered",
+    "timeout":55
+  },
+  "inputPhoneText": {
+    "name":"inputPhoneText",
+    "type":"ui",
+    "locator":"",
+    "ctype":"",
+    "attrname":"text",
+    "location":"contains",
+    "value":"Please input your phone",
+    "timeout":55
+  },
+  "codeSendText":{
+    "name":"codeSendText",
+    "type":"ui",
+    "locator":"",
+    "ctype":"",
+    "attrname":"text",
+    "location":"contains",
+    "value":"Verification code has been sent to you",
+    "timeout":55
+  },
+  "registerSuccessText":{
+    "name":"registerSuccessText",
+    "type":"ui",
+    "locator":"",
+    "ctype":"",
+    "attrname":"text",
+    "location":"contains",
+    "value":"Register successfully",
+    "timeout":55
+  },
+  "leaveConversationText":{
+    "name":"leaveConversationText",
+    "type":"ui",
+    "locator":"",
+    "ctype":"",
+    "attrname":"text",
+    "location":"contains",
+    "value":"You are leaving current conversation",
+    "timeout":55
+  }
+}

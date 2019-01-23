@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="osvc.tests.bui.mobile Test" verbose="1">
+    <listeners>
+        <listener class-name="base.report.TestNGReport" />
+    </listeners>
+
+    <test name="testdemo" thread-count="2" parallel="methods">
+
+
+        <groups>
+            <define name="functest">
+                <include name="paas"/>
+                <include name="paas2"/>
+            </define>
+        </groups>
+
+        <classes>
+            <class name="osvc.tests.integrator.web.RightnowConfig.RNConnTest">
+                <methods>
+                    <include name="rnConnTest"></include>
+                </methods>
+            </class>
+            <class name="osvc.tests.integrator.web.SMSConfig.SMSConfigTest">
+                <methods>
+                    <include name="setUpSMSBusyNumberConnection"></include>
+                    <include name="setUpSMSConnection"></include>
+                </methods>
+            </class>
+        </classes>
+
+    </test>
+</suite>

@@ -1,0 +1,72 @@
+{
+  "naviSetBtn":{
+    "name":"naviSetBtn",
+    "type":"web",
+    "locator":"id",
+    "value":"navigationSetBtn",
+    "comment":"Navigation set button"
+  },
+  "incidentBtn": {
+    "name":"incidentBtn",
+    "type":"web",
+    "locator":"css",
+    "value":"div.navigation-group-set-root.navigation-group-set",
+    "among":{
+      "attrName":"text",
+      "location":"equals",
+      "value":"Incidents"
+    },
+    "comments":"All navigation elements"
+  },
+  "contactBtn":{
+    "name":"contactBtn",
+    "type":"web",
+    "locator":"css",
+    "value":"div.navigation-group-set-root.navigation-group-set",
+    "among":{
+      "attrName":"text",
+      "location":"equals",
+      "value":"Contacts"
+    },
+    "comments":"All navigation elements"
+  }
+  ,
+  "incidentByContact": {
+    "name":"incidentByContact",
+    "type":"tag",
+    "locator":"",
+    "ctype":"span",
+    "attrname":"0",
+    "location":"equals",
+    "value":"Incidents by Contact"
+  },
+  "contactSearch":{
+    "name":"contactSearch",
+    "type":"tag",
+    "locator":"",
+    "ctype":"span",
+    "attrname":"0",
+    "location":"equals",
+    "value":"Contact Search"
+  }
+  ,
+  "deleteIncidentBtn": {
+    "name":"deleteIncidentBtn",
+    "type":"css",
+    "locator":"css",
+    "ctype":"span",
+    "attrname":"title",
+    "location":"equals",
+    "value":"Delete",
+    "timeout":30
+  },
+  "deleteConfirmBtn": {
+    "name":"deleteConfirmBtn",
+    "type":"tag",
+    "locator":"",
+    "ctype":"span",
+    "attrname":"0",
+    "location":"equals",
+    "value":"Yes"
+  }
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="WeChat Integrator OSvC on Paas Daily Run" verbose="1" parallel="tests" thread-count="3">
+    <!--  Configure testng listener-->
+    <listeners>
+        <listener class-name="base.report.TestNGReport" />
+    </listeners>
+
+
+    <test name="Test - wechat credential test">
+        <classes>
+            <class name="osvc.tests.integrator.web.WeChatConfig.WeChatCredentialsTest"></class>
+        </classes>
+    </test>
+
+    <test name="Test - wechat menu setting test">
+        <classes>
+            <class name="osvc.tests.integrator.web.WeChatConfig.WeChatMenuSettingTest"></class>
+        </classes>
+    </test>
+
+    <test name="Test - wechat channel mark test">
+        <classes>
+            <class name="osvc.tests.integrator.web.WeChatConfig.WeChatChannelMarkTest"></class>
+        </classes>
+    </test>
+
+    <test name="Test - wechat auto reply test">
+        <classes>
+            <class name="osvc.tests.integrator.web.WeChatConfig.AutoReplyTest"></class>
+        </classes>
+    </test>
+
+    <test name="sso test">
+        <classes>
+            <class name="osvc.tests.integrator.web.SSOConfig.SSOSetupTest"></class>
+        </classes>
+    </test>
+
+    <test name="sms test">
+        <classes>
+            <class name="osvc.tests.integrator.web.SMSConfig.SMSConfigTest"></class>
+        </classes>
+    </test>
+
+    <test name="rn connection test">
+        <classes>
+            <class name="osvc.tests.integrator.web.RightnowConfig.RNConnTest"></class>
+        </classes>
+    </test>
+
+    <test name="home page test">
+        <classes>
+            <class name="osvc.tests.integrator.web.RightnowConfig.HomePageBtnTest"></class>
+        </classes>
+    </test>
+
+    <test name="routing menu test">
+        <classes>
+            <class name="osvc.tests.integrator.web.RoutingMenuConfig.RoutingMenuSettingTest"></class>
+        </classes>
+    </test>
+
+    <test name="routing menu test">
+        <classes>
+            <class name="osvc.tests.integrator.web.RoutingMenuConfig.RoutingMenuSettingTest"></class>
+        </classes>
+    </test>
+
+    <test name="survey test">
+        <classes>
+            <class name="osvc.tests.integrator.web.chatdemo.SurveyTest"/>
+        </classes>
+    </test>
+
+    <test name="chat test">
+        <classes>
+            <class name="osvc.tests.integrator.web.chatdemo.ChatTest"><methods>
+                <exclude name="chatTimeOutTest"></exclude>
+                <exclude name="RegiTimeOutTest"></exclude>
+                <exclude name="noResponseTimeOutTest"></exclude>
+                <exclude name="queueTimeOutTest"></exclude>
+                <exclude name="getChatStatusInNBHTest"></exclude>
+            </methods></class>
+        </classes>
+    </test>
+
+    <test name="incident test">
+        <classes>
+            <class name="osvc.tests.integrator.web.chatdemo.IncidentTest"><methods>
+                <include name="checkIncidentInRN"></include>
+                <!--<include name="createIncidentOutOfHoliday_TurnOff"></include>-->
+                <!--<include name="createIncidentOutOfBusinessHours"></include>-->
+                <!--<include name="createIncidentOutOfHoliday"></include>-->
+                <!--<include name="createIncidentOutOfBusinessHours_TurnOff"></include>-->
+            </methods></class>
+        </classes>
+    </test>
+
+    <test name="media chat test">
+        <classes>
+            <class name="osvc.tests.integrator.web.chatdemo.ImageChatTest"/>
+        </classes>
+    </test>
+
+    <test name="invalid and retry chat test">
+        <classes>
+            <class name="osvc.tests.integrator.web.chatdemo.InvalidAndRetryTest"/>
+        </classes>
+    </test>
+
+    <test name="transfer chat session test" parallel="classes" thread-count="3">
+        <classes>
+            <class name="osvc.tests.integrator.web.GroupChat.Mobile1">
+                <methods>
+                    <include name="transferChatSession_mobile1"></include>
+                </methods>
+            </class>
+            <class name="osvc.tests.integrator.web.GroupChat.Agent1">
+                <methods>
+                    <include name="transferChatSession_agent1"></include>
+                </methods>
+            </class>
+            <class name="osvc.tests.integrator.web.GroupChat.Agent2">
+                <methods>
+                    <include name="transferChatSession_agent2"></include>
+                </methods>
+            </class>
+        </classes>
+
+    </test>
+
+    <test name="merge contact" parallel="classes" thread-count="2">
+        <classes>
+            <class name="osvc.tests.integrator.web.mergecontact.MergeContactMobile">
+                <methods>
+                    <include name="MergeContact_Mobile"></include>
+                </methods>
+            </class>
+            <class name="osvc.tests.integrator.web.mergecontact.MergeContactWeb">
+                <methods>
+                    <include name="MergeContact_Agent"></include>
+                </methods>
+            </class>
+        </classes>
+
+    </test>
+
+    <test name="chat conference test" parallel="classes" thread-count="3">
+        <classes>
+            <class name="osvc.tests.integrator.web.GroupChat.Agent1">
+                <methods>
+                    <include name="chatConferenceTest_agent1"></include>
+                </methods>
+            </class>
+            <class name="osvc.tests.integrator.web.GroupChat.Agent2">
+                <methods>
+                    <include name="chatConferenceTest_agent2"></include>
+                </methods>
+            </class>
+            <class name="osvc.tests.integrator.web.GroupChat.Mobile1">
+                <methods>
+                    <include name="transferChatSession_mobile1"></include>
+                </methods>
+            </class>
+        </classes>
+
+    </test>
+
+</suite>

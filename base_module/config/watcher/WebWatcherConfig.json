@@ -1,0 +1,16 @@
+[
+  {
+    "text":"An unknown application error has occurred",
+    "by": {
+      "type":"xpath",
+      "value":"(//span[text()='OK'])[0]"
+    }
+  },
+  {
+    "text":"You currently have active chat sessions.  If you log off",
+    "by":{
+      "type":"xpath",
+      "value":"(//span[text()='OK'])[0]"
+    }
+  }
+]

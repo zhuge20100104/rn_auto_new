@@ -1,0 +1,3 @@
+[submodule "base_module"]
+	path = base_module
+	url = git@orahub.oraclecorp.com:oardc-projects/base_module.git

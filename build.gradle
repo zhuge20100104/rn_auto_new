@@ -1,0 +1,63 @@
+plugins {
+    id 'java'
+}
+
+group 'com.oracle.test'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'maven'
+
+sourceCompatibility = 1.8
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+repositories {
+
+
+    maven {
+        url "http://10.182.176.252:8081/repository/auto_base/"
+    }
+
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+//    compile project(':base_module_main')
+    compile group: 'com.oracle.test', name: 'osvc-wechat-base', version: '1.7.7'
+}
+
+
+task runConfig(type: JavaExec, dependsOn: 'classes') {
+    description 'Execute config manager main classes'
+    main = 'config.manager.ConfigManager'
+    classpath = sourceSets.main.runtimeClasspath
+    args ''
+}
+
+task generateXML(type: JavaExec, dependsOn: 'classes') {
+    description 'Generate local xml file,Usage: gradlew generateXML -Parg=[{packageName}]'
+    main = 'config.manager.LocalConfigManager'
+    classpath = sourceSets.main.runtimeClasspath
+    if ( project.hasProperty("arg") ) {
+        args Eval.me(arg)
+    }
+}
+
+
+task runTests(type: JavaExec, dependsOn: 'classes') {
+    main = 'org.testng.TestNG'
+    classpath = files("./src/main/java",
+            project.sourceSets.main.compileClasspath,
+            project.sourceSets.test.compileClasspath,
+            project.sourceSets.main.runtimeClasspath,
+            project.sourceSets.test.runtimeClasspath)
+
+
+    args = ["-parallel",  "methods", "-d", "./build/test-output","-listener","base.report.TestNGReport", "src/main/resources/xml/currentTest.xml"]
+    //args = ["-parallel",  "methods", "-threadcount", "1", "-d", "./build/test-output", "src/main/resources/xml/test.xml"]
+}
+
